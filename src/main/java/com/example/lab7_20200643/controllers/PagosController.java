@@ -25,7 +25,7 @@ public class PagosController {
         responseMap.put("Pagos",pagosRepository.findAll());
         return ResponseEntity.ok(responseMap);
     }
-    @PostMapping("/registrarPagos")
+    @PostMapping("/registrarPago")
     public ResponseEntity<HashMap<String,Object>> registrarPagos(@RequestBody Pagos pago){
         HashMap<String,Object> responseMap = new HashMap<>();
         pagosRepository.save(pago);
